@@ -5,7 +5,11 @@ onion to phrase and back again.
 
 example:
 	$ ./leekspeak e facebookcorewwwi.onion
+	
 	anything saml suspension optimizations loto
+	
 	$ ./leekspeak d "anything saml suspension optimizations loto"
+	
 	facebookcorewwwi.onion
+	
 
