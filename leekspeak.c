@@ -141,10 +141,12 @@ static u8 *by_value(const u16 value)
 static void onion_to_phrase(u8 *onion)
 {
 	if (!onion) goto end;
-	u8 *raw_onion = onion_decode(onion);
+	u8 *raw_onion;
 	u64 i;
 	u16 x;
 
+  raw_onion = onion_decode(onion);
+  if (!raw_onion) return;
 	for (i = 0; i < 5; i++) {
 		x = *(u16 *)&raw_onion[i * 2];
 		printf("%s ", by_value(x));
