@@ -1,10 +1,9 @@
-CC=cc
-CFLAGS=-std=gnu99 -O2 -s
+CFLAGS=-Wall -Wextra -pedantic -std=gnu99 -O2 -s
 
 all: leekspeak
 
-%: %.c
-	${CC} ${CFLAGS} -o $@ $^
+leekspeak: leekspeak.c onion.c
+	gcc ${CFLAGS} -o $@ $^
 
 clean:
 	-rm leekspeak
